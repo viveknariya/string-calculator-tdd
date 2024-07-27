@@ -19,3 +19,7 @@ test("should return result for a any number", () => {
 test("should return result for a new line delimiter", () => {
   expect(add("9\n1,10")).toBe(20);
 });
+
+test("should return result for custom delimiter", () => {
+  expect(add("//;\n1;2")).toBe(3);
+});
