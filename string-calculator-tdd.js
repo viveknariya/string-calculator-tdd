@@ -10,6 +10,13 @@ function add(numbers) {
 
   let numbersArray = numbers.split(delimiter);
 
+  const negativesNumbers = numbersArray.filter((num) => num < 0);
+  if (negativesNumbers.length) {
+    throw new Error(
+      "Negative numbers not allowed: " + negativesNumbers.join(", ")
+    );
+  }
+
   let result = 0;
   numbersArray.forEach((element) => {
     result += Number(element);
