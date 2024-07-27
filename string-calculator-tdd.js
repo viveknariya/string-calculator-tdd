@@ -1,7 +1,14 @@
 function add(numbers) {
   if (numbers === "") return 0;
 
-  return Number(numbers);
+  let numbersArray = numbers.split(",");
+
+  let result = 0;
+  numbersArray.forEach((element) => {
+    result += Number(element);
+  });
+
+  return result;
 }
 
 module.exports = add;

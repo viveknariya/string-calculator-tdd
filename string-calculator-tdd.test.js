@@ -7,3 +7,7 @@ test("should return 0 for an empty string", () => {
 test("should return result for a one number", () => {
   expect(add("9")).toBe(9);
 });
+
+test("should return result for a two number", () => {
+  expect(add("9,1")).toBe(10);
+});
