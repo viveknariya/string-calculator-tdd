@@ -25,5 +25,17 @@ test("should return result for custom delimiter", () => {
 });
 
 test("should throw an error for negative numbers", () => {
-  expect(() => add("1,-2,3,-4")).toThrow("Negative numbers not allowed: -2");
+  expect(() => add("1,-2,3,-4")).toThrow(
+    "Negative numbers not allowed: -2, -4"
+  );
+});
+test("should return result for a any number", () => {
+  expect(add("9 ,1, 10")).toBe(20);
+});
+
+test("should return result for custom delimiter", () => {
+  expect(add("//***\n1***2")).toBe(3);
+});
+test("should return result for custom delimiter", () => {
+  expect(add("//***\n55***7")).toBe(62);
 });
